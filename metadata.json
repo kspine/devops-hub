@@ -1,0 +1,8 @@
+{
+  "name": "DevOps Hub Studio",
+  "description": "Enterprise R&D Efficiency Platform for Unity, Unreal, Web, Mobile, and Cloud Native Microservices. Features high-performance build orchestration, intelligent telemetry, automated script generation, and advanced compliance auditing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

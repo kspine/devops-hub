@@ -1,0 +1,86 @@
+        id="devops-case-studies"
+        className="bg-gray-900 border border-gray-800 rounded-xl p-6 mt-6"
+      >
+        <h2 className="text-lg font-semibold mb-6 flex items-center gap-2">
+          <Briefcase className="h-5 w-5 text-orange-400" />
+          {isZh
+            ? "工程化产品案例 (Engineering Case Studies)"
+            : "Engineering Product Case Studies"}
+        </h2>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          {/* Case 1: Unity */}
+          <div className="bg-gray-800/40 rounded-xl p-5 border border-gray-700/50 hover:bg-gray-800/60 transition-colors">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 bg-orange-500/10 rounded-lg text-orange-400">
+                <Gamepad2 className="h-5 w-5" />
+              </div>
+              <h3 className="font-semibold text-gray-200">
+                {isZh
+                  ? "Unity 跨平台游戏构建优化"
+                  : "Unity Cross-Platform Build Optimization"}
+              </h3>
+            </div>
+            <div className="space-y-4">
+              <div>
+                <div className="text-xs text-gray-500 mb-1">
+                  {isZh ? "业务场景" : "Business Scenario"}
+                </div>
+                <p className="text-sm text-gray-400">
+                  {isZh
+                    ? "独立游戏公司跨平台发布，面临构建时间过长、计算资源浪费等瓶颈。"
+                    : "Indie studio releasing cross-platform, facing long build times and compute resource waste."}
+                </p>
+              </div>
+              <div>
+                <div className="text-xs text-gray-500 mb-1">
+                  {isZh
+                    ? "DevOps Hub Studio 解决方案"
+                    : "DevOps Hub Studio Solution"}
+                </div>
+                <ul className="space-y-1.5 text-xs text-gray-300">
+                  <li className="flex items-start gap-1.5">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-orange-400 mt-0.5" />{" "}
+                    {isZh
+                      ? "提供专属 Unity 构建模板与 AI 优化提示"
+                      : "Dedicated Unity build templates & AI optimization prompts"}
+                  </li>
+                  <li className="flex items-start gap-1.5">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-orange-400 mt-0.5" />{" "}
+                    {isZh
+                      ? "智能识别未修改资产，免除不必要资源编译"
+                      : "Smart detection of unmodified assets to skip compilation"}
+                  </li>
+                  <li className="flex items-start gap-1.5">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-orange-400 mt-0.5" />{" "}
+                    {isZh
+                      ? "基于历史推荐最优增量构建策略"
+                      : "Historical data-driven incremental build strategy recommendation"}
+                  </li>
+                </ul>
+              </div>
+              <div className="pt-3 border-t border-gray-700/50 flex items-center justify-between text-xs font-medium text-emerald-400">
+                <span className="flex items-center gap-1">
+                  <TrendingUp className="h-3.5 w-3.5" />{" "}
+                  {isZh ? "构建成功率提升 40%" : "Success Rate +40%"}
+                </span>
+                <span className="flex items-center gap-1">
+                  <Zap className="h-3.5 w-3.5" />{" "}
+                  {isZh ? "耗时降低 65%" : "Time Reduced 65%"}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Case 2: Unreal Engine */}
+          <div className="bg-gray-800/40 rounded-xl p-5 border border-gray-700/50 hover:bg-gray-800/60 transition-colors">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 bg-indigo-500/10 rounded-lg text-indigo-400">
+                <Boxes className="h-5 w-5" />
+              </div>
+              <h3 className="font-semibold text-gray-200">
+                {isZh
+                  ? "大型 Unreal 项目构建提效"
+                  : "Large Unreal Project Build Efficiency"}
+              </h3>
+            </div>

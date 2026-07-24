@@ -1,0 +1,148 @@
+        id="devops-core-platform"
+        className="bg-gray-900 border border-gray-800 rounded-xl p-6 mt-6"
+      >
+        <h2 className="text-lg font-semibold mb-6 flex items-center gap-2">
+          <Construction className="h-5 w-5 text-emerald-400" />
+          {isZh
+            ? "以“工程”为核心的 DevOps 全流程工具平台"
+            : "Engineering-Centric DevOps Tool Platform"}
+        </h2>
+        <p className="text-sm text-gray-400 mb-6">
+          {isZh
+            ? "DevOPS Hub Studio，作为一个新一代企业级 DevOps 平台，必须从“产品”升级为“系统工程”级别的平台："
+            : "As a next-generation enterprise DevOps platform, DevOps Hub Studio must upgrade from a 'product' to a 'systems engineering' platform:"}
+        </p>
+
+        <div className="overflow-x-auto">
+          <table className="w-full text-left text-sm text-gray-400">
+            <thead className="text-xs uppercase bg-gray-800 text-gray-300">
+              <tr>
+                <th className="px-6 py-4 rounded-tl-lg">
+                  {isZh ? "维度" : "Dimension"}
+                </th>
+                <th className="px-6 py-4">
+                  {isZh ? "核心价值" : "Core Value"}
+                </th>
+                <th className="px-6 py-4 rounded-tr-lg">
+                  {isZh
+                    ? "DevOPS Hub Studio 的方向"
+                    : "DevOps Hub Studio Direction"}
+                </th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-800">
+              <tr className="hover:bg-gray-800/50 transition-colors">
+                <td className="px-6 py-4 font-semibold text-gray-200">
+                  <div className="flex items-center gap-2">
+                    <Wrench className="h-4 w-4 text-emerald-400" />
+                    {isZh ? "产品功能" : "Product Function"}
+                  </div>
+                </td>
+                <td className="px-6 py-4">
+                  {isZh
+                    ? "提升构建效率与质量"
+                    : "Improve build efficiency and quality"}
+                </td>
+                <td className="px-6 py-4 text-sky-400">
+                  {isZh
+                    ? "构建优化提示 + 构建健康管理"
+                    : "Optimization Prompts + Health Management"}
+                </td>
+              </tr>
+              <tr className="hover:bg-gray-800/50 transition-colors">
+                <td className="px-6 py-4 font-semibold text-gray-200">
+                  <div className="flex items-center gap-2">
+                    <Settings2 className="h-4 w-4 text-emerald-400" />
+                    {isZh ? "工程能力" : "Engineering Capability"}
+                  </div>
+                </td>
+                <td className="px-6 py-4">
+                  {isZh
+                    ? "构建流程可编程化、可优化"
+                    : "Programmable and optimizable build processes"}
+                </td>
+                <td className="px-6 py-4 text-sky-400">
+                  {isZh
+                    ? "工程流程图 + 构建缓存机制 + 构建策略推荐"
+                    : "Process Graphs + Caching + Strategy Recs"}
+                </td>
+              </tr>
+              <tr className="hover:bg-gray-800/50 transition-colors">
+                <td className="px-6 py-4 font-semibold text-gray-200">
+                  <div className="flex items-center gap-2">
+                    <Link className="h-4 w-4 text-emerald-400" />
+                    {isZh ? "工程集成" : "Engineering Integration"}
+                  </div>
+                </td>
+                <td className="px-6 py-4">
+                  {isZh
+                    ? "跨平台、跨工具、跨系统连接"
+                    : "Cross-platform, cross-tool, cross-system connection"}
+                </td>
+                <td className="px-6 py-4 text-sky-400">
+                  {isZh
+                    ? "API 集成套件 + 构建模板库 + 工程规范整合"
+                    : "API Suites + Templates + Standard Integration"}
+                </td>
+              </tr>
+              <tr className="hover:bg-gray-800/50 transition-colors">
+                <td className="px-6 py-4 font-semibold text-gray-200">
+                  <div className="flex items-center gap-2">
+                    <ShieldCheck className="h-4 w-4 text-emerald-400" />
+                    {isZh ? "工程治理" : "Engineering Governance"}
+                  </div>
+                </td>
+                <td className="px-6 py-4">
+                  {isZh
+                    ? "提高项目合规性与生产力"
+                    : "Improve project compliance and productivity"}
+                </td>
+                <td className="px-6 py-4 text-sky-400">
+                  {isZh
+                    ? "构建健康评分 + 构建歧视检测 + 构建审计"
+                    : "Health Scoring + Bias Detection + Auditing"}
+                </td>
+              </tr>
+              <tr className="hover:bg-gray-800/50 transition-colors">
+                <td className="px-6 py-4 font-semibold text-gray-200">
+                  <div className="flex items-center gap-2">
+                    <Gauge className="h-4 w-4 text-emerald-400" />
+                    {isZh ? "工程性能" : "Engineering Performance"}
+                  </div>
+                </td>
+                <td className="px-6 py-4">
+                  {isZh
+                    ? "构建耗时管理、资源优化"
+                    : "Build time management, resource optimization"}
+                </td>
+                <td className="px-6 py-4 text-sky-400">
+                  {isZh
+                    ? "构建响应速度 + 构建流程分析 + 开源插件支持"
+                    : "Response Speed + Flow Analysis + OSS Plugins"}
+                </td>
+              </tr>
+              <tr className="hover:bg-gray-800/50 transition-colors">
+                <td className="px-6 py-4 font-semibold text-gray-200">
+                  <div className="flex items-center gap-2">
+                    <Lightbulb className="h-4 w-4 text-emerald-400" />
+                    {isZh ? "工程扩展" : "Engineering Extension"}
+                  </div>
+                </td>
+                <td className="px-6 py-4">
+                  {isZh
+                    ? "支持趋势性实践与创新"
+                    : "Support trending practices and innovation"}
+                </td>
+                <td className="px-6 py-4 text-sky-400">
+                  {isZh
+                    ? "AI 构建建议 + 构建策略建议 + 工程知识图谱"
+                    : "AI Build Advice + Strategy Tips + Knowledge Graph"}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  );
+}

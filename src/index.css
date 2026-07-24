@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;750&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", var(--font-sans);
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-gray-850: #1b2330;
+  --color-gray-950: #030712;
+  
+  --animate-spin-slow: spin 10s linear infinite;
+  /* Accent colors */
+  --color-accent: var(--accent-color, #6366f1);
+
+  /* Semantic Theme Variables - Default (Deep Black) */
+  --bg-main: #000000;
+  --bg-card: #0a0a0a;
+  --bg-surface: #121212;
+  --bg-elevated: #18181b;
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --glass-bg: rgba(10, 10, 10, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+  --contrast-threshold: 4.5;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  * {
+    border-color: var(--border-subtle);
+  }
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Accent Themes */
+.theme-indigo { --accent-color: #6366f1; }
+.theme-emerald { --accent-color: #10b981; }
+.theme-rose { --accent-color: #f43f5e; }
+
+/* Theme Mappings */
+/* Deep Black Mode (Default Root & .theme-dark) */
+:root, .theme-dark {
+  --bg-main: #000000;
+  --bg-card: #0a0a0a;
+  --bg-surface: #121212;
+  --bg-elevated: #1a1a1e;
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.18);
+  --glass-bg: rgba(10, 10, 10, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --card-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 8px 10px -6px rgba(0, 0, 0, 0.6);
+  --contrast-threshold: 4.5;
+}
+
+/* Professional Bright White Light Mode */
+.theme-light {
+  --bg-main: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-surface: #f1f5f9;
+  --bg-elevated: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --border-subtle: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --glass-bg: rgba(255, 255, 255, 0.92);
+  --glass-border: #e2e8f0;
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --contrast-threshold: 7.0;
+
+  /* Tailwind Utility Color Variable Mappings for Light Mode */
+  --color-gray-950: #ffffff;
+  --color-gray-900: #f8fafc;
+  --color-gray-850: #f1f5f9;
+  --color-gray-800: #e2e8f0;
+  --color-gray-700: #cbd5e1;
+}
+
+/* Utility Helpers for Theme Components */
+.theme-card-bg {
+  background-color: var(--bg-card);
+  border-color: var(--border-subtle);
+  color: var(--text-primary);
+}
+
+.theme-surface-bg {
+  background-color: var(--bg-surface);
+  border-color: var(--border-subtle);
+  color: var(--text-primary);
+}
+
+.theme-glass-panel {
+  background-color: var(--glass-bg);
+  border-color: var(--glass-border);
+  backdrop-filter: blur(12px);
+}
+
+/* Failsafe Light Mode Overrides for Arbitrary Dark Utilities & Components */
+.theme-light .bg-\[\#000000\],
+.theme-light .bg-\[\#020202\],
+.theme-light .bg-\[\#050505\],
+.theme-light .bg-\[\#080808\],
+.theme-light .bg-\[\#09090b\],
+.theme-light .bg-\[\#09090c\],
+.theme-light .bg-\[\#0a0a0a\],
+.theme-light .bg-\[\#0a0a0f\],
+.theme-light .bg-\[\#0b0b0e\],
+.theme-light .bg-\[\#0f0f0f\],
+.theme-light .bg-\[\#0f0f15\],
+.theme-light .bg-\[\#121212\],
+.theme-light .bg-\[\#18181b\],
+.theme-light .bg-black {
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+.theme-light .bg-gray-950 {
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+.theme-light .bg-gray-900 {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+.theme-light .bg-black\/30,
+.theme-light .bg-black\/40,
+.theme-light .bg-black\/50,
+.theme-light .bg-black\/60,
+.theme-light .bg-black\/70,
+.theme-light .bg-black\/80,
+.theme-light .bg-black\/90,
+.theme-light .bg-gray-900\/30,
+.theme-light .bg-gray-900\/40,
+.theme-light .bg-gray-900\/50,
+.theme-light .bg-gray-900\/60,
+.theme-light .bg-gray-900\/80,
+.theme-light .bg-gray-950\/60,
+.theme-light .bg-gray-950\/80 {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+.theme-light .border-gray-800,
+.theme-light .border-gray-850,
+.theme-light .border-gray-900,
+.theme-light .border-gray-900\/40,
+.theme-light .border-gray-900\/50,
+.theme-light .border-gray-900\/60,
+.theme-light .border-white\/5,
+.theme-light .border-white\/10,
+.theme-light .border-white\/20 {
+  border-color: #e2e8f0;
+}
+
+.theme-light .bg-white\/5 { background-color: rgba(15, 23, 42, 0.03); }
+.theme-light .bg-white\/10 { background-color: rgba(15, 23, 42, 0.06); }
+.theme-light .bg-white\/20 { background-color: rgba(15, 23, 42, 0.1); }
+
+.theme-light .text-gray-100 { color: #0f172a; }
+.theme-light .text-gray-200 { color: #1e293b; }
+.theme-light .text-gray-300 { color: #334155; }
+.theme-light .text-gray-400 { color: #475569; }
+.theme-light .text-gray-500 { color: #64748b; }
+
+/* Fix Recharts axis and tooltip for light mode */
+.theme-light .recharts-cartesian-grid line {
+  stroke: #e2e8f0 !important;
+}
+.theme-light .recharts-cartesian-axis-tick-value tspan,
+.theme-light .recharts-text {
+  fill: #64748b !important;
+}
+.theme-light .recharts-tooltip-wrapper .recharts-default-tooltip {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  color: #0f172a !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.2);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.4);
+}
+
+.theme-light ::-webkit-scrollbar-thumb {
+  background: rgba(15, 23, 42, 0.15);
+}
+.theme-light ::-webkit-scrollbar-thumb:hover {
+  background: rgba(15, 23, 42, 0.3);
+}

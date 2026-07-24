@@ -1,0 +1,146 @@
+        id="devops-future-directions"
+        className="bg-gray-900 border border-gray-800 rounded-xl p-6 mt-6"
+      >
+        <h2 className="text-lg font-semibold mb-6 flex items-center gap-2">
+          <Compass className="h-5 w-5 text-indigo-400" />
+          {isZh
+            ? "工程系统能力的未来方向 (Future Directions)"
+            : "Engineering System Future Directions"}
+        </h2>
+
+        <div className="overflow-x-auto">
+          <table className="w-full text-left text-sm text-gray-400">
+            <thead className="text-xs uppercase bg-gray-800 text-gray-300">
+              <tr>
+                <th className="px-6 py-4 rounded-tl-lg">
+                  {isZh ? "方向" : "Direction"}
+                </th>
+                <th className="px-6 py-4">
+                  {isZh ? "背景与目标" : "Background & Goal"}
+                </th>
+                <th className="px-6 py-4 rounded-tr-lg">
+                  {isZh ? "产品可拓展能力" : "Extensible Capabilities"}
+                </th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-800">
+              <tr className="hover:bg-gray-800/50 transition-colors">
+                <td className="px-6 py-4 font-semibold text-gray-200">
+                  <div className="flex items-center gap-2">
+                    <BrainCircuit className="h-4 w-4 text-indigo-400" />
+                    {isZh ? "AI 构建连贯性模型" : "AI Build Coherence Model"}
+                  </div>
+                </td>
+                <td className="px-6 py-4">
+                  {isZh
+                    ? "构建过程执行不连贯，需智能识别断点和流程断层"
+                    : "Inconsistent build execution, need to smartly identify breakpoints"}
+                </td>
+                <td className="px-6 py-4 text-emerald-400">
+                  {isZh
+                    ? "构建健康度 + 构建状态提示"
+                    : "Build Health + State Prompts"}
+                </td>
+              </tr>
+              <tr className="hover:bg-gray-800/50 transition-colors">
+                <td className="px-6 py-4 font-semibold text-gray-200">
+                  <div className="flex items-center gap-2">
+                    <BookOpen className="h-4 w-4 text-indigo-400" />
+                    {isZh
+                      ? "工程知识自动化"
+                      : "Engineering Knowledge Automation"}
+                  </div>
+                </td>
+                <td className="px-6 py-4">
+                  {isZh
+                    ? "工程流程需标准化、可复制"
+                    : "Engineering processes need standardization and replication"}
+                </td>
+                <td className="px-6 py-4 text-emerald-400">
+                  {isZh
+                    ? "工程模式推荐 + 构建知识图谱"
+                    : "Engineering Pattern Recs + Build Knowledge Graph"}
+                </td>
+              </tr>
+              <tr className="hover:bg-gray-800/50 transition-colors">
+                <td className="px-6 py-4 font-semibold text-gray-200">
+                  <div className="flex items-center gap-2">
+                    <FileSearch className="h-4 w-4 text-indigo-400" />
+                    {isZh ? "构建可解释性模型" : "Build Explainability Model"}
+                  </div>
+                </td>
+                <td className="px-6 py-4">
+                  {isZh
+                    ? "构建结果需可追溯、可解释"
+                    : "Build results need traceability and explainability"}
+                </td>
+                <td className="px-6 py-4 text-emerald-400">
+                  {isZh
+                    ? "构建日志分析 + 构建失败归因引擎"
+                    : "Log Analysis + Failure Attribution Engine"}
+                </td>
+              </tr>
+              <tr className="hover:bg-gray-800/50 transition-colors">
+                <td className="px-6 py-4 font-semibold text-gray-200">
+                  <div className="flex items-center gap-2">
+                    <Network className="h-4 w-4 text-indigo-400" />
+                    {isZh
+                      ? "工程与运维的深度连接"
+                      : "Deep Connection of Eng & Ops"}
+                  </div>
+                </td>
+                <td className="px-6 py-4">
+                  {isZh
+                    ? "运维需求与开发流程深度整合"
+                    : "Ops needs deeply integrated with dev processes"}
+                </td>
+                <td className="px-6 py-4 text-emerald-400">
+                  {isZh
+                    ? "提供构建部署反馈系统、系统性能监测接口"
+                    : "Deployment Feedback System + Monitoring Interfaces"}
+                </td>
+              </tr>
+              <tr className="hover:bg-gray-800/50 transition-colors">
+                <td className="px-6 py-4 font-semibold text-gray-200">
+                  <div className="flex items-center gap-2">
+                    <Layers className="h-4 w-4 text-indigo-400" />
+                    {isZh ? "构建部署一致性" : "Build & Deployment Consistency"}
+                  </div>
+                </td>
+                <td className="px-6 py-4">
+                  {isZh
+                    ? "多平台项目部署不一致"
+                    : "Multi-platform deployments are inconsistent"}
+                </td>
+                <td className="px-6 py-4 text-emerald-400">
+                  {isZh
+                    ? "部署建议 + 跨平台部署管理"
+                    : "Deployment Suggestions + Cross-platform Management"}
+                </td>
+              </tr>
+              <tr className="hover:bg-gray-800/50 transition-colors">
+                <td className="px-6 py-4 font-semibold text-gray-200">
+                  <div className="flex items-center gap-2">
+                    <Shield className="h-4 w-4 text-indigo-400" />
+                    {isZh
+                      ? "企业工程控制平台"
+                      : "Enterprise Eng Control Platform"}
+                  </div>
+                </td>
+                <td className="px-6 py-4">
+                  {isZh
+                    ? "企业工程能力需统一管理"
+                    : "Enterprise engineering capabilities need unified management"}
+                </td>
+                <td className="px-6 py-4 text-emerald-400">
+                  {isZh
+                    ? "构建流程控制台 + 审计追踪 + 工程合规体系"
+                    : "Build Console + Audit Trail + Compliance System"}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  :root {
+    --color-white: #ffffff;
+    --color-gray-900: #111827;
+  }
+  .theme-light {
+    --color-white: var(--color-gray-900);
+  }
+  .bg-indigo-600 {
+    --color-white: #ffffff;
+    background-color: #4f46e5;
+  }
+  .text-white { color: var(--color-white); }
+</style>
+</head>
+<body class="theme-light">
+  <div class="text-white">This should be dark</div>
+  <div class="bg-indigo-600 text-white">This should be white</div>
+</body>
+</html>
